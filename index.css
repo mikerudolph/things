@@ -1,0 +1,204 @@
+body {
+	margin: 80px;
+
+	text-align: center;
+}
+
+
+/**
+ * First Arrow
+ */
+
+@-webkit-keyframes scrollToContent {
+	0% {
+		-webkit-opacity:0;
+		opacity:0;
+
+		-webkit-transform:translateY(-80px)
+	}
+
+	50% {
+		-webkit-opacity:1;
+		opacity:1
+	}
+
+	100%{
+		-webkit-opacity:0;
+		opacity:0;
+
+		-webkit-transform:translateY(20px)
+	}
+}
+
+@-webkit-keyframes scrollToRightFirst {
+	0% {
+		-webkit-opacity:0;
+		opacity:0;
+
+		-webkit-transform:translateX(-80px)
+	}
+
+	50% {
+		-webkit-opacity:1;
+		opacity:1
+	}
+
+	100%{
+		-webkit-opacity:0;
+		opacity:0;
+
+		-webkit-transform:translateX(60px)
+	}
+}
+
+@-webkit-keyframes scrollToRightSecond {
+	0% {
+		-webkit-opacity:0;
+		opacity:0;
+
+		-webkit-transform:translateX(-80px)
+	}
+
+	50% {
+		-webkit-opacity:1;
+		opacity:1
+	}
+
+	100%{
+		-webkit-opacity:0;
+		opacity:0;
+
+		-webkit-transform:translateX(40px)
+	}
+}
+
+@-webkit-keyframes scrollToRightThird {
+	0% {
+		-webkit-opacity:0;
+		opacity:0;
+
+		-webkit-transform:translateX(-80px)
+	}
+
+	50% {
+		-webkit-opacity:1;
+		opacity:1
+	}
+
+	100%{
+		-webkit-opacity:0;
+		opacity:0;
+
+		-webkit-transform:translateX(20px)
+	}
+}
+
+@-webkit-keyframes stretchRuler {
+	0% {
+		width: 0%;
+		background-color: #333;
+	}
+
+	50% {
+		width: 100%;
+		background-color: #FF0000;
+	}
+
+	100% {
+		width: 0%;
+		background-color: #333;
+	}
+}
+
+#arrow1 .inner {
+	height: 170px;
+}
+
+#arrow1 i {
+	font-size: 5em;
+
+	/* Animate */
+	-webkit-animation-duration: 4s;
+	animation-duration: 4s;
+
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+
+	-webkit-animation-name: scrollToContent;
+	animation-name: scrollToContent;
+}
+
+/**
+ * Arrows 2
+ */
+
+#arrows2 .inner {
+	height: 170px;
+}
+
+#arrows2 i {
+	font-size: 5em;
+
+	/* Animate */
+	-webkit-animation-duration: 1.8s;
+	animation-duration: 1.8s;
+
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+#arrows2 i.first {
+	-webkit-animation-name: scrollToRightFirst;
+	animation-name: scrollToRightFirst;
+}
+
+#arrows2 i.second {
+	-webkit-animation-name: scrollToRightSecond;
+	animation-name: scrollToRightSecond;
+}
+
+#arrows2 i.third {
+	-webkit-animation-name: scrollToRightThird;
+	animation-name: scrollToRightThird;
+}
+
+/**
+ * Horizontal ruler
+ */
+
+#ruler1 .inner {
+	height: 170px;
+	position: relative;
+}
+
+#ruler1 .line {
+	display: block;
+	height: 20px;
+	width: 30%;
+	background-color: #333;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+
+	/* Animate */
+	-webkit-animation-duration: 5s;
+	animation-duration: 5s;
+
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+
+	-webkit-animation-name: stretchRuler;
+	animation-name: stretchRuler;
+}
