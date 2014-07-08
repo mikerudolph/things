@@ -34,7 +34,7 @@
 
             $('h3 span').html(varient);
 
-            ga.send('event', 'experiment', 'viewed');
+            ga('send', 'event', 'experiment', 'viewed');
         })
         .fail(function() {
             console.error('Failed to load Google Experiments API');
