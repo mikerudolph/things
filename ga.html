@@ -9,11 +9,8 @@
         font-family: 'Helvetica', Verdana;
       }
     </style>
-  </head>
-  <body>
 
-    <h1>Google Analytics Test</h1>
-
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -22,8 +19,24 @@
 
       ga('create', 'UA-52651066-1', 'auto');
       ga('send', 'pageview');
-
     </script>
+  </head>
+  <body>
 
+    <h1>Google Analytics Test</h1>
+
+    <h3>Your set variation is: <span>&nbsp;</span></h3>
+
+    <script>
+      $.getScript('http://google-analytics.com/cs/api.js?experiment=m3CFCqTwTC25QlMaukmx3A')
+        .done(function() {
+            var varient = cxApi.chooseVariation();
+
+            $('h3 span').html(varient);
+        })
+        .fail(function() {
+            console.error('Failed to load Google Experiments API');
+        });
+    </script>
   </body>
 </html>
